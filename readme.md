@@ -33,8 +33,8 @@ MR sequence is passed as a function of the simulator.
 
 ```
 #!matlab
-[Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt', 'config/seqpar_GESFIDE.txt')
-```  
+[Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt','config/seqpar_GESFIDE.txt')
+```
 
     2. **Dictionary use**:
 This package can also be used to build up a dictionary of MR signals. Any 
