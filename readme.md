@@ -23,20 +23,25 @@ MR sequence is passed as a function of the simulator.
 
 ### How do I get set up? ###
 
-* Example of configurations files for the voxel and the MR sequences are found in config/
-* **Single/simple use**:
+* Add mrvox/ to your matlab path
+* run test.m to check if it is working
+* open test.m and start tinkering you own stuff
+* Examples of configuration files for the voxel and the MR sequences are found in config/.
+* Main use case is: 
+
+    1. **Single/simple use**:
 ```
 #!matlab
-[Sa, Sphi] = VoxelSim2D_do_one('config/Param1.txt',1)
+[Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt', 'config/seqpar_GESFIDE.txt')
 ```
 
-* **Dictionary use**:
+    2. **Dictionary use**:
 This package can also be used to build up a dictionary of MR signals. Any 
 parameters X in the structure Model.phy Model.vox or Model.geo with 
 size(X,2) > 1 will be considered for dictionary building.
 ```
 #!matlab
-Dico = GenLookUp2D('LT.txt','~','ClusterInfo.txt')
+Dico = GenLookUp2D('config/voxpar_dico.txt','config/seqpar_GESFIDE.txt')
 ```
 
 * Deployment: The Code can be deployed using Matlab parallel toolbox but 

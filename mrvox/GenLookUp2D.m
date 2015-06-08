@@ -11,11 +11,14 @@ function Dico = GenLookUp2D(ModelFileName,SeqFileName,PathOut,ServerInfo)
 
 if nargin < 4
     Para = 0;
+    if nargin == 2
+        PathOut = '';
+        ServerInfo = '';
+    elseif nargin == 3
+        ServerInfo = '';
+    end
 elseif nargin == 4
     Para = 1;
-elseif nargin < 3
-    fprintf('Not enough input argument\nExiting\n');
-    return;
 end
 
 if ~iscell(ModelFileName)
@@ -164,10 +167,12 @@ for NbFile = 1:numel(FileIn)
     end
     
     %% Save Lookup Table
-    [~,FileShort,~] = fileparts(File);
-    [~,SeqFileShort,~] = fileparts(SeqFileName);
-    SaveFile = fullfile(PathOut,sprintf('%s_%s_Dico.mat',FileShort,SeqFileShort));
-    save(SaveFile,'Dico','par','Model','Label','Seq','-v7.3');
+    if PathOut
+        [~,FileShort,~] = fileparts(File);
+        [~,SeqFileShort,~] = fileparts(SeqFileName);
+        SaveFile = fullfile(PathOut,sprintf('%s_%s_Dico.mat',FileShort,SeqFileShort));
+        save(SaveFile,'Dico','par','Model','Label','Seq','-v7.3');
+    end
 end
 
 
