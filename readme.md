@@ -29,14 +29,14 @@ MR sequence is passed as a function of the simulator.
 * Examples of configuration files for the voxel and the MR sequences are found in config/.
 * Main use case is:
 
-    1. **Single/simple use**:
+    * **Single/simple use**:
 
 ```
 #!matlab
 [Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt','config/seqpar_GESFIDE.txt')
 ```
 
-    2. Test
+    * Test
 
 This package can also be used to build up a dictionary of MR signals. Any 
 parameters X in the structure Model.phy Model.vox or Model.geo with 
