@@ -25,25 +25,12 @@ MR sequence is passed as a function of the simulator.
 
 * Example of configurations files for the voxel and the MR sequences are found in config/
 * Single/simple use:
-```
-#!matlab
-[Sa, Sphi] = VoxelSim2D_do_one(FileName, LineNum)
-```
+    ```
+    #!matlab
+    [Sa, Sphi] = VoxelSim2D_do_one('config/Param1.txt',1)
+    ```
 
-Input:
-    * FileName: Path to the file containing the structure of the Model and the Seququence
-    * LineNum:  Line Index of the set of input parameters that has to be simulated (optional, default = 1)
-Output:
-    * Sa:   Magnitude of the MR signal
-    * Sphi: Phase of the MR signal
-
-Ex: 
-```
-#!matlab
-[Sa, Sphi] = VoxelSim2D_do_one('config/Param1.txt',1)
-```
-
-## Dictionary use ##
+* Dictionary use
 This package can also be used to build up a dictionary of MR signals
 Any parameters X in the structure Model.phy Model.vox or Model.geo with size(X,2) > 1 will
 be considered for dictionary building.
