@@ -23,10 +23,10 @@ Model.dt                =   0.5e-3;     % (s)
 Model.geo.res           =   64;        % Dimension of the lattice
 Model.geo.path          =   '/tmp';     % Path where geometry are save/load
 
-Model.geo.vasc.Id       =   [1];        % Id # of vascular geometry
-Model.geo.vasc.Vf       =   [0.025];     % Blood volume fraction (%) 0.025;%
+Model.geo.vasc.Id       =   1;        % Id # of vascular geometry
+Model.geo.vasc.Vf       =   0.025;     % Blood volume fraction (%) 0.025;%
 Model.geo.vasc.N        =   2;         % Number of vessels
-Model.geo.vasc.R        =   [6] *1e-6;  % Radius of the vessels (m)
+Model.geo.vasc.R        =   6 *1e-6;  % Radius of the vessels (m)
 Model.geo.vasc.Inter    =   1e-6;       % (m) Interspace between vessels (-1 generates a cartesian grid if number of vessel is squared)
 
 Model.geo.cell.Id       =   1;          % Id # of the cell geometry (linked to vascular geometry index)
@@ -39,9 +39,9 @@ Model.phy.M0.vasc       =   1;          % Proton concentration
 Model.phy.M0.cell       =   1;          %
 Model.phy.M0.ees        =   1;          %
 
-Model.phy.vasc.khi      =   [0.5]*1e-6;       % Magnetic susceptibility (SI)
+Model.phy.vasc.khi      =   0.5*1e-6;       % Magnetic susceptibility (SI)
 Model.phy.vasc.T1       =   1000e-3;        % (s) Can be Inf
-Model.phy.vasc.T2       =   [70]*1e-3;        % (s) Can be Inf 140e-3;%
+Model.phy.vasc.T2       =   70*1e-3;        % (s) Can be Inf 140e-3;%
 
 Model.phy.cell.khi      =   0e-6;          % (ppm cgs)
 Model.phy.cell.T1       =   Inf;        % (s) Can be Inf
@@ -49,11 +49,11 @@ Model.phy.cell.T2       =   Inf;        % (s) Can be Inf
 
 Model.phy.ees.khi       =   0e-6;          % (ppm cgs)
 Model.phy.ees.T1        =   1000e-3;        % (s) Can be Inf
-Model.phy.ees.T2        =   [80]*1e-3;;        % (s) Can be Inf 140e-3;%
+Model.phy.ees.T2        =   80*1e-3;;        % (s) Can be Inf 140e-3;%
 
 %% Voxel param
-Model.vox.B0theta       =   [pi/2];     % orientation of B0. If Model.Flag.B0Ori3D is 1, this parameter is unused.
-Model.vox.B0phi         =   [0];
+Model.vox.B0theta       =   pi/2;     % orientation of B0. If Model.Flag.B0Ori3D is 1, this parameter is unused.
+Model.vox.B0phi         =   0;
 Model.vox.RFfact        =   1;          % Factor applied on the angle of the RF pulse (B1 sensitivity)
 Model.vox.B0off         =   [0];        % Offset in (Hz)
 Model.vox.B0Gr.gx       =   0;          % Additional gradient within the voxel x component (T/m)
