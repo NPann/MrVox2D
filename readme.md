@@ -30,13 +30,13 @@ MR sequence is passed as a function of the simulator.
 * Main use cases are:
 
     * **Single/simple use**:
-
 ```
 #!matlab
-[Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt','config/seqpar_GESFIDE.txt')```
+[Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt','config/seqpar_GESFIDE.txt')
+```
 
-     * Test
-
+* or:
+    * **Dictionary use**:
 This package can also be used to build up a dictionary of MR signals. Any 
 parameters X in the structure Model.phy Model.vox or Model.geo with 
 size(X,2) > 1 will be considered for dictionary building.
