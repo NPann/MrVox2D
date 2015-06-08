@@ -1,0 +1,22 @@
+# This file contains the sequence parameters
+%
+% Each line which starts by Seq. will be read by VoxelSim.m
+
+
+####################
+##    Sequence    ##
+####################
+
+Seq.Id          	=   '90_Minus90PlusPhi';
+Seq.Name        	=   '@Seq_nRF';
+Seq.Tacq        	=   (5)*1e-3;
+%Seq.TR          	=   61e-3;
+%Seq.RF.exc.time 	=   [0  30]*1e-3;
+%Seq.RF.exc.ang  	=   [90 180];
+%Seq.RF.exc.pha  	=   [0  90; 0  100; 0  110; 0  120; 0  130; 0  140; 0 150; 0 160; 0 170; 0 180; 0 190; 0 200; 0 210; 0 220; 0 230; 0 240; 0 250; 0 260; 0 270];
+Seq.TR          	=   10e-3;
+Seq.RF.exc.time     =   0e-3;
+Seq.RF.exc.ang      =   10;
+Seq.RF.exc.pha      =   0;
+Seq.RF.exc.phainc   =   [0; 10; 20; 30; 40; 50; 60; 70; 80; 90; 100; 110; 120; 130; 140; 150; 160; 170; 180];
+Seq.NbRep           =   300;

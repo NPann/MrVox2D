@@ -1,0 +1,19 @@
+# This file contains the sequence parameters
+%
+% Each line which starts by Seq. will be read by VoxelSim.m
+
+
+####################
+##    Sequence    ##
+####################
+
+Seq.Id          	=   '90_Minus90PlusPhi';
+Seq.Name        	=   '@Seq_nRF';
+Seq.Tacq        	=   (5)*1e-3;
+Seq.TR          	=   10e-3;
+Seq.RF.exc.time     =   0e-3;
+Seq.RF.exc.ang      =   10;
+Seq.RF.exc.pha0      =   0;
+Seq.RF.exc.phainc   =   117;    % phase increment (phc)
+Seq.RF.exc.phaMod   =   'lin';  % either linear ('lin'): n x phc or quadratic ('qua'): n x (n-1)/2 x phc
+Seq.NbRep           =   300;
