@@ -7,7 +7,7 @@ signal
 ### What is MrVox for? ###
 
 * MrVox is for simulating the MR complex signal given: 
-* a voxel with a user-defined microstructure
+** a voxel with a user-defined microstructure
 * a MR pulse sequence
 MrVox is designed with versatility in mind and user can control:
 1. the geometry of the voxel (size, number of blood vessels and cells, their size, their spacing, etc.), 
