@@ -24,36 +24,25 @@ MR sequence is passed as a function of the simulator.
 ### How do I get set up? ###
 
 * Example of configurations files for the voxel and the MR sequences are found in config/
-* Single/simple use:
-    ```
-    #!matlab
-    [Sa, Sphi] = VoxelSim2D_do_one('config/Param1.txt',1)
-    ```
+* **Single/simple use**:
+```
+#!matlab
+[Sa, Sphi] = VoxelSim2D_do_one('config/Param1.txt',1)
+```
 
-* Dictionary use
-This package can also be used to build up a dictionary of MR signals
-Any parameters X in the structure Model.phy Model.vox or Model.geo with size(X,2) > 1 will
-be considered for dictionary building.
+* **Dictionary use**:
+This package can also be used to build up a dictionary of MR signals. Any 
+parameters X in the structure Model.phy Model.vox or Model.geo with 
+size(X,2) > 1 will be considered for dictionary building.
+```
+#!matlab
+Dico = GenLookUp2D('LT.txt','~','ClusterInfo.txt')
+```
 
-The Main function is:
-Dico = GenLookUp2D(FileIn,PathOut,ServerInfo)
-Input: - FileIn: path to the file where the Model and the MR Sequence are defined
-               (Must be a a cell of strings for multiple files)
-       - PathOut: path to the repertory where the dictionaries will be saved
-
- Optional: - ServerInfo: Path to the file defining the cluster info for
- parallel jobs (required MCDS + Matlab Runtime Library installed)
-
-Ex: GenLookUp2D('LT.txt','~','ClusterInfo.txt')
-
-
-## DEPLOYEMENT
-
-The Code can be deployed using Matlab parallel toolbox but can also be compiled using
-the Matlab compiler and deployed with another scheduler (or the Matlab Scheduler).
+* Deployment: The Code can be deployed using Matlab parallel toolbox but 
+can also be compiled using the Matlab compiler and deployed with another scheduler (or the Matlab Scheduler).
 When deployed, the clusterinfo.txt file must defined accordingly.
 The compiled code provide has been compiled with MatlabR2011b under Linux64b.
-
 
 
 ### Contribution guidelines ###
