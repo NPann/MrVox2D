@@ -8,8 +8,8 @@ signal
 
 * MrVox is for simulating the MR complex signal given:
 
-   1. a voxel with a user-defined microstructure
-   2. a MR pulse sequence
+    1. a voxel with a user-defined microstructure
+    2. a MR pulse sequence
 
 * MrVox is designed with versatility in mind and user can control:
 
