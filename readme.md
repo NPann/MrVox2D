@@ -11,7 +11,7 @@ signal
     2. a MR pulse sequence  
 * MrVox is designed with versatility in mind and user can control:
     1. the geometry of the voxel (size, number of blood vessels and cells, their size, their spacing, etc.)
-    2. the MR-related properties of different compartments (T1, T2, M0, susceptibility)
+    2. the MR-related properties of the different compartments (T1, T2, M0, susceptibility)
     3. the magnetic field and its variation over the voxel dimension
     4. the water diffusion  
 * MrVox is particularly designed to generate dictionaries of MR signals with varying input properties (blood volume, vessel size). For example, it has been used succesfully in the vascluar fingerprinting framework [(Christen et al. NeuroImage 20014)](http://www.sciencedirect.com/science/article/pii/S1053811913012019)
