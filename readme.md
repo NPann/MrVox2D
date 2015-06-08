@@ -27,14 +27,13 @@ MR sequence is passed as a function of the simulator.
 * run test.m to check if it is working
 * open test.m and start tinkering you own stuff
 * Examples of configuration files for the voxel and the MR sequences are found in config/.
-* Main use case is:
+* Main use cases are:
 
     * **Single/simple use**:
 
 ```
 #!matlab
-[Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt','config/seqpar_GESFIDE.txt')
-```  
+[Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt','config/seqpar_GESFIDE.txt')```
 
      * Test
 
