@@ -18,7 +18,7 @@ signal
 3. the magnetic field and its variation over the voxel dimension
 4. the water diffusion.
  
-* MrVox is particularly designed to generate dictionaries of MR signals with varying input properties (blood volume, vessel size). For example, it has been used succesfully in the vascluar fingerprinting framework (Christen et al. NeuroImage 20014)
+* MrVox is particularly designed to generate dictionaries of MR signals with varying input properties (blood volume, vessel size). For example, it has been used succesfully in the vascluar fingerprinting framework [(Christen et al. NeuroImage 20014)](http://www.sciencedirect.com/science/article/pii/S1053811913012019)
 
 * current version is v1.0.0
 
