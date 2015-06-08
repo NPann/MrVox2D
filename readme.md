@@ -34,7 +34,7 @@ MR sequence is passed as a function of the simulator.
 ```
 #!matlab
 [Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt','config/seqpar_GESFIDE.txt')
-```
+```  
 
      * Test
 
