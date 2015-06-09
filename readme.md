@@ -29,9 +29,9 @@ MR sequence is passed as a function of the simulator.
 #!matlab
 >>example
 ```
-* open test.m and start tinkering you own stuff
-* Examples of configuration files for the voxel and the MR sequences are found in config/.
-* Main use cases are:
+* open example.m and VoxelSim2D_do_one to start tinkering your own stuff
+* Examples of configuration files for the voxel and MR sequences can be found in config/.
+* The two main use cases are:
 
     * **Single/simple use**:
 ```
