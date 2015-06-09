@@ -74,8 +74,9 @@ for NbFile = 1:numel(FileIn)
             set(job(JobId),'PathDependencies',Cluster.FilePath);
             fprintf('Block Input from %d/%d to %d/%d\n',JobSeq(JobId,1),NbSimu,JobSeq(JobId,2),NbSimu);
             for SimuIdx = JobSeq(JobId,1):JobSeq(JobId,2)
-                if Cluster.MRL.On %Used the standalone version with the MRL routine
-                    %                     createTask(job(JobId), @DepVoxelSim2D, 2, {File,Cluster,SimuIdx});
+                if Cluster.MRL.On % Used the standalone version with the MRL routine
+                    fprintf('Not implemented yet. Exiting\n')
+                    return
                 else % Used the matlab version
                     createTask(job(JobId), @VoxelSim2D_do_one, 2, {File,SeqFileName,SimuIdx,1});
                 end
