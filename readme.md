@@ -1,12 +1,12 @@
 # README #
 
-MrVox is a toolkit writen in Matlab to simulate the Magnetic Resonance 
+MrVox2D is a toolkit writen in Matlab to simulate the Magnetic Resonance 
 signal
 
 
 ### What is MrVox for? ###
 
-* MrVox is for simulating the MR complex signal given:
+* MrVox2D is for simulating the MR complex signal given:
     1. a voxel with a user-defined microstructure
     2. a MR pulse sequence  
 * MrVox is designed with versatility in mind and user can control:
@@ -14,7 +14,7 @@ signal
     2. the MR-related properties of the different compartments (T1, T2, M0, susceptibility)
     3. the magnetic field and its variation over the voxel dimension
     4. the water diffusion  
-* MrVox is particularly designed to generate dictionaries of MR signals with varying input properties (blood volume, vessel size). 
+* MrVox2D is particularly designed to generate dictionaries of MR signals with varying input properties (blood volume, vessel size). 
 For example, it has been used succesfully in the vascluar fingerprinting framework 
 [(Christen et al. NeuroImage 20014)](http://www.sciencedirect.com/science/article/pii/S1053811913012019)
 * **Specifically**: The voxel is considered as a 2D plane and the magnetic inclusions (e.g. vessels) 
