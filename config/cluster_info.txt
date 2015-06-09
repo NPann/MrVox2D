@@ -2,10 +2,10 @@
 
 Cluster.NbOfWorkers     = 20;                                               % Number of workers to use
 Cluster.MaxTasksPerJob  = 400;                                              % Number of Task per jobs
-Cluster.FilePath        = {'/home/nicolas/Code/Matlab/Simu/Release/2D'};    % Path to the source file
-Cluster.Scheduler.Name  = 'p41matlab1';                                     % Name of the matlab scheduler
+Cluster.FilePath        = {'/home/user/mrvox'};                             % Path to the source file
+Cluster.Scheduler.Name  = 'cluster_name';                                   % Name of the matlab scheduler
 Cluster.Scheduler.Type  = 'jobmanager';                                     % Type of the matlab scheduler
 Cluster.MRL.On          = 0;                                                % Use compiled version of the code
-Cluster.MRL.path        = '/home/nicolas/MATLAB/MATLAB_Compiler_Runtime/v716';% Path to the matlab runtime library
+Cluster.MRL.path        = '/home/user/MATLAB/MATLAB_Compiler_Runtime/v716'; % Path to the matlab runtime library
 Cluster.Backup.On       = 1;                                                % Enable backup when a job is done in case of server crash 
 Cluster.Backup.Path 	= '/tmp';                                           % Path to where the data are backup

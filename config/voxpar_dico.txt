@@ -7,7 +7,7 @@
 ####################
 
 Model.Flag.Verbose      =   1;          % Display verbal information
-Model.Flag.Display      =   0;          % Display
+Model.Flag.Display      =   0;          % Display simplistic illustrations
 Model.Flag.B0Ori3D      =   0;          % 1: Mag field is averaged over 3 orthogonal direction, 0: B0 is in plane
 Model.Flag.SaveGeo      =   1;          % Save/Load geometry
 Model.Flag.SingleCast   =   1;          % Cast to single to speed up FFT computation
@@ -23,7 +23,7 @@ Model.dt                =   0.5e-3;     % (s)
 Model.geo.res           =   64;         % Dimension of the lattice
 Model.geo.path          =   '/tmp';     % Path where geometry are save/load
 
-Model.geo.vasc.Id       =   [2];        % Id # of vascular geometry
+Model.geo.vasc.Id       =   1;          % Id # of vascular geometry
 Model.geo.vasc.Vf       =   [0.05];     % Blood volume fraction (%) 0.025;%
 Model.geo.vasc.N        =   4;          % Number of vessels
 Model.geo.vasc.R        =   [1 2 3 4 5:10] *1e-6;  % Radius of the vessels (m)

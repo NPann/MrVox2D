@@ -36,7 +36,7 @@ MR sequence is passed as a function of the simulator.
 ```
 
 * or:
-    * **Dictionary use**:Any parameters X in the structure Model.phy, Model.vox or Model.geo with size(X,2) > 1 will be considered for dictionary building.
+    * **Dictionary use**: Any parameters X in the structure Model.phy, Model.vox or Model.geo with size(X,2) > 1 will be considered for dictionary building.
 ```
 #!matlab
 Dico = GenLookUp2D('config/voxpar_dico.txt','config/seqpar_GESFIDE.txt')

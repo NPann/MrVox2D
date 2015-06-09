@@ -144,9 +144,8 @@ for NbFile = 1:numel(FileIn)
             % Clean Job
             destroy(job(JobId));
         end
-        
-        %% Run local
     else
+        %% Run local
         for a = 1:NbSimu
             fprintf('Input %d/%d\n',a,NbSimu);
             [Sa, Sphi] = VoxelSim2D_do_one(File,SeqFileName,a,1);
