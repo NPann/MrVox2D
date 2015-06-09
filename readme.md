@@ -17,9 +17,7 @@ signal
 * MrVox2D is particularly designed to generate dictionaries of MR signals with varying input properties (blood volume, vessel size). 
 For example, it has been used succesfully in the vascluar fingerprinting framework 
 [(Christen et al. NeuroImage 20014)](http://www.sciencedirect.com/science/article/pii/S1053811913012019)
-* **Specifically**: The voxel is considered as a 2D plane and the magnetic inclusions (e.g. vessels) 
-are disks randomly spread in the 2D plane. Voxel and sequence parameters are defined in a text file.
-MR sequence is passed as a function of the simulator.
+* **Specifically**: The voxel is considered as a 2D plane and the magnetic inclusions (e.g. vessels) are disks randomly spread in this 2D plane. Voxel and sequence parameters are defined in a text file. MR sequence is passed as a function of the simulator. Diffusion and intravoxel susceptibility effect are considered. Even though the simulation is 2D, the MR signal is similar to the one obtained in a 3D voxel with isotropic vessel orientation when the number of vessels is "high enough" [(Pannetier et al. Plos. 2014)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057636).
 
 ### How do I get set up? ###
 
