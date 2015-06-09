@@ -46,7 +46,7 @@ MR sequence is passed as a function of the simulator.
 Dico = GenLookUp2D('config/voxpar_dico.txt','config/seqpar_GESFIDE.txt')
 ```
 
-* Deployment: Dictionary generation is highly parrallelizable and the code
+* **Deployment**: Dictionary generation is highly parrallelizable and the code
 provides a support for using Matlab Discributed Computing Server (MDCS). Server
 configuration must be defined in the configuration file (see config/cluster_info.txt for an example).
 The example file is compatible with Matlab R2011b and the code will likely need an update
@@ -55,9 +55,8 @@ to be use with newer version. The code can also be compiled using Matlab compile
 
 ### Contribution guidelines ###
 
-* 
+* Through the issues tracker 
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* Nicolas Pannetier, Thomas Christen
