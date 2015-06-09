@@ -55,8 +55,8 @@ to be use with newer version. The code can also be compiled using Matlab compile
 
 ### Contribution guidelines ###
 
-* Through the issues tracker 
+Through the issues tracker 
 
 ### Who do I talk to? ###
 
-* Nicolas Pannetier, Thomas Christen
+Nicolas Pannetier, Thomas Christen
