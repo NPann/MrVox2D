@@ -24,7 +24,11 @@ MR sequence is passed as a function of the simulator.
 ### How do I get set up? ###
 
 * Add mrvox/ to your matlab path
-* run test.m to check if it is working
+* run example to check if everything is working:
+```
+#!matlab
+>>example
+```
 * open test.m and start tinkering you own stuff
 * Examples of configuration files for the voxel and the MR sequences are found in config/.
 * Main use cases are:
@@ -42,10 +46,11 @@ MR sequence is passed as a function of the simulator.
 Dico = GenLookUp2D('config/voxpar_dico.txt','config/seqpar_GESFIDE.txt')
 ```
 
-* Deployment: The Code can be deployed using Matlab parallel toolbox but 
-can also be compiled using the Matlab compiler and deployed with another scheduler (or the Matlab Scheduler).
-When deployed, the clusterinfo.txt file must defined accordingly.
-The compiled code provide has been compiled with MatlabR2011b under Linux64b.
+* Deployment: Dictionary generation is highly parrallelizable and the code
+provides a support for using Matlab Discributed Computing Server (MDCS). Server
+configuration must be defined in the configuration file (see config/cluster_info.txt for an example).
+The example file is compatible with Matlab R2011b and the code will likely need an update
+to be use with newer version. The code can also be compiled using Matlab compiler and deployed with another scheduler
 
 
 ### Contribution guidelines ###
