@@ -25,23 +25,19 @@ For example, it has been used succesfully in the vascluar fingerprinting framewo
 ### How do I get set up? ###
 
 * Add mrvox/ to your matlab path
-* run example to check if everything is working:
-```
-#!matlab
->>example
-```
-* open example.m and VoxelSim2D_do_one to start tinkering your own stuff
+* Check out the example in example.m
+* Start tinkering with your own stuff
 * Examples of configuration files for the voxel and MR sequences can be found in config/.
 * The two main use cases are:
 
-    * **Single/simple use**:
+    * **Single/simple use**: to run the simulator on a voxel/sequence:
 ```
 #!matlab
 [Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt','config/seqpar_GESFIDE.txt')
 ```
 
 * or:
-    * **Dictionary use**: Any parameters X in the structure Model.phy, Model.vox or Model.geo with size(X,2) > 1 will be considered for dictionary building.
+    * **Dictionary use**: to generate a dictionary of MR signal by varying any parameters defined as an array in the Model structure of the configuration file (Model.phy, Model.vox or Model.geo):
 ```
 #!matlab
 Dico = GenLookUp2D('config/voxpar_dico.txt','config/seqpar_GESFIDE.txt')
