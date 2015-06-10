@@ -1,0 +1,63 @@
+# This file contains the parameters of the simulation
+%
+% Each line which starts by Model. will be read by VoxelSim.m
+
+####################
+##      Model     ##
+####################
+
+Model.Flag.Verbose      =   1;          % Display verbal information
+Model.Flag.Display      =   0;          % Display simplistic illustrations
+Model.Flag.B0Ori3D      =   0;          % 1: Mag field is averaged over 3 orthogonal direction, 0: B0 is in plane
+Model.Flag.SaveGeo      =   1;          % Save/Load geometry
+Model.Flag.SingleCast   =   1;          % Cast to single to speed up FFT computation
+Model.Flag.ExtraVascOnly=   0;          % Measure only extravascular component
+Model.Flag.HinderedDiff =   1;          % Vessel are impermeable to proton diffusion
+Model.Flag.OffFlipAng   =   0;          % Account for flip angle inhomogneity due to B0 variation
+Model.Flag.ScaleSpaceKer=   1;          % Switch diffusion kernel to ScaleSpace one
+Model.Flag.CastFact     =   1;          % Measured faction of volume of the voxel
+
+Model.dt                =   0.5e-3;     % (s)
+
+%% Geometry
+Model.geo.res           =   64;         % Dimension of the lattice
+Model.geo.path          =   '/tmp';     % Path where geometry are save/load
+
+Model.geo.vasc.Id       =   1;          % Id # of vascular geometry
+Model.geo.vasc.Vf       =   0.025;      % Blood volume fraction (%) 0.025;%
+Model.geo.vasc.N        =   2;          % Number of vessels
+Model.geo.vasc.R        =   6 *1e-6;    % Radius of the vessels (m)
+Model.geo.vasc.Inter    =   1e-6;       % (m) Interspace between vessels (-1 generates a cartesian grid if number of vessel is squared)
+
+Model.geo.cell.Id       =   1;          % Id # of the cell geometry (linked to vascular geometry index)
+Model.geo.cell.Rc       =   15e-6;      % (m) Radius maximum of the cells
+Model.geo.cell.Inter    =   0.2e-6;     % (m) Interspace between cells and cell-vessel
+Model.geo.cell.Poro     =   1;          % Fraction of the ees: (ees volume) / (total volume)
+
+%% Physic/Physio param
+Model.phy.M0.vasc       =   1;          % Proton concentration
+Model.phy.M0.cell       =   1;          %
+Model.phy.M0.ees        =   1;          %
+
+Model.phy.vasc.khi      =   1*1e-6;     % Magnetic susceptibility (SI)
+Model.phy.vasc.T1       =   1000e-3;    % (s) Can be Inf
+Model.phy.vasc.T2       =   70*1e-3;    % (s) Can be Inf
+
+Model.phy.cell.khi      =   0e-6;       % (ppm cgs)
+Model.phy.cell.T1       =   1000e-3;    % (s) Can be Inf
+Model.phy.cell.T2       =   80*1e-3;    % (s) Can be Inf
+
+Model.phy.ees.khi       =   0e-6;       % (ppm cgs)
+Model.phy.ees.T1        =   1000e-3;    % (s) Can be Inf
+Model.phy.ees.T2        =   80*1e-3;    % (s) Can be Inf 140e-3;%
+
+%% Voxel param
+Model.vox.B0theta       =   pi/2;       % orientation of B0. If Model.Flag.B0Ori3D is 1, this parameter is unused.
+Model.vox.B0phi         =   0;
+Model.vox.RFfact        =   1;          % Factor applied on the angle of the RF pulse (B1 sensitivity)
+Model.vox.B0off         =   [0];        % Offset in (Hz)
+Model.vox.B0Gr.gx       =   0;          % gradient along x (integer n, such as dephasing over voxel extend during dt is 2pi x n)
+
+%% Other inputs
+Model.phy.B0            =   3;          % Static Magnetic Field (T)
+Model.phy.DH2O          =   1000*1e-12; % Proton diffusion (m2/s)
