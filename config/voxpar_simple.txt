@@ -7,7 +7,7 @@
 ####################
 
 Model.Flag.Verbose      =   1;          % Display verbal information
-Model.Flag.Display      =   0;          % Display simplistic illustrations
+Model.Flag.Display      =   1;          % Display simplistic illustrations
 Model.Flag.B0Ori3D      =   0;          % 1: Mag field is averaged over 3 orthogonal direction, 0: B0 is in plane
 Model.Flag.SaveGeo      =   1;          % Save/Load geometry
 Model.Flag.SingleCast   =   1;          % Cast to single to speed up FFT computation
