@@ -4,7 +4,7 @@ MrVox2D is a toolkit writen in Matlab to simulate the Magnetic Resonance
 signal
 
 
-### What is MrVox for? ###
+### What is MrVox2D for? ###
 
 * MrVox2D is for simulating the MR complex signal given:
     1. a voxel with a user-defined microstructure
