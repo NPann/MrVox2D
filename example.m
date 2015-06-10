@@ -7,27 +7,42 @@
 addpath(genpath(fullfile(pwd, 'mrvox')));
 
 %% FID example
-fprintf('Simulating a FID on simple voxel...\n');
+fprintf('\n\t>> Simulating a FID on simple voxel...\n\n');
 [sa, sphi] = VoxelSim2D_do_one('config/voxpar_simple.txt', 'config/seqpar_fid.txt');
+fprintf('\n\n[Press any key to continue]\n\n')
+pause
+close all
 
 %% Spin echo example
-fprintf('Simulating a spin echo on simple voxel...\n');
+fprintf('\n\t>> Simulating a spin echo on simple voxel...\n\n');
 [sa, sphi] = VoxelSim2D_do_one('config/voxpar_simple.txt', 'config/seqpar_se.txt');
+fprintf('\n\n[Press any key to continue]\n\n')
+pause
+close all
 
 %% Spin echo example with strong susceptibility and reduced diffusion
-fprintf('Simulating a spin echo on simple voxel...\n');
+fprintf('\n\t>> Simulating a spin echo on voxel with higher susceptibility and lower diffusion...\n\n');
 [sa, sphi] = VoxelSim2D_do_one('config/voxpar_simple_highsusc_lowdiff.txt', 'config/seqpar_se.txt');
+fprintf('\n\n[Press any key to continue]\n\n')
+pause
+close all
 
 %% Stimulated echo example
-fprintf('Simulating a spin echo on simple voxel...\n');
+fprintf('\n\t>> Simulating a spin echo on simple voxel...\n\n');
 [sa, sphi] = VoxelSim2D_do_one('config/voxpar_simple_highsusc_lowdiff.txt', 'config/seqpar_stim.txt');
+fprintf('\n\n[Press any key to continue]\n\n')
+pause
+close all
 
 %% Narrow diffusion gradient example with hindered diffusion and cells
-fprintf('Simulating a narrow diffusion gradient on simple voxel...\n');
+fprintf('\n\t>> Simulating a narrow diffusion gradient on simple voxel...\n\n');
 [sa, sphi] = VoxelSim2D_do_one('config/voxpar_simple_hindered_cell.txt', 'config/seqpar_narrowpulse_singlerefoc.txt');
+fprintf('\n\n[Press any key to continue]\n\n')
+pause
+close all
 
 %% Dictionary generation example
-fprintf('Simulating a dictionary on a simplistic voxel with varying vessel radius...\n');
+fprintf('\n\t>> Simulating a dictionary on a simplistic voxel with varying vessel radius...\n\n');
 dico = GenLookUp2D('config/voxpar_dico.txt', 'config/seqpar_GESFIDE.txt');
 
 % Just to get input parameters for plotting legend
