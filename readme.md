@@ -56,4 +56,9 @@ Through the issues tracker
 
 ### Who do I talk to? ###
 
-Nicolas Pannetier, UCSF
+Nicolas Pannetier, UCSF - VAMC SF
+Norbert Schuff, UCSF - VAMC SF
+
+### License ###
+
+MrVox2D is licensed under the terms of the BSD license. Please see the License file in the repository
