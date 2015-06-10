@@ -56,4 +56,4 @@ Through the issues tracker
 
 ### Who do I talk to? ###
 
-Nicolas Pannetier, Thomas Christen
+Nicolas Pannetier, UCSF
