@@ -76,8 +76,13 @@ count = 1;
 S = struct('per',[],'par',[]);
 t = [];
 if Model.Flag.Verbose,ticI = tic;tic_dt=tic;str = '';end
-if Model.Flag.Verbose,fprintf('Voxel fov: \t%.1fum\nLattice size: \t%d\nStep time: \t%.1fms\n\n',too.fov*1e6,Model.geo.vasc.N,Model.dt*1e3);end
-if Model.Flag.Display,AlreadyDraw = 0;Svisu = [];end
+if Model.Flag.Verbose,
+    fprintf('Voxel fov: \t%.1fum\n', too.fov*1e6);
+    fprintf('Number of vessels: \t%d\n', Model.geo.vasc.N);
+    fprintf('Step time: \t%.1fms\n\n',Model.dt*1e3);
+    fprintf('MR sequence: %s\n\n',Seq.Name);
+end
+if Model.Flag.Display, AlreadyDraw = 0; Svisu = []; end
 
 if isfield(Seq,'Imaging')
     Model.Tmax = Seq.Imaging.Ph.step * Seq.TR + Seq.Imaging.Dummy * Seq.TR;

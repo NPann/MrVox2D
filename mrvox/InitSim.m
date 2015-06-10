@@ -110,9 +110,9 @@ if Model.geo.res > 1
     maxX = max(too.xB(:));
     dxX = diff(too.xB(1:2));
     Gx = Model.vox.B0Gr.gx*2*pi/(2*maxX+dxX)/Model.phy.gamma/Model.dt;
-    too.dBm = too.dBm + ...
-        Gx * too.xB + Model.vox.B0Gr.gy * too.yB + ...
-        Model.vox.B0Gr.gx2 * too.xB.^2 + Model.vox.B0Gr.gy2 * too.yB.^2;
+    % Aliasing from diffusion kernel with FFT contrains gradient to
+    % produces dephasing modulo 2pi over voxel extend
+    too.dBm = too.dBm + Gx * too.xB ;
 end
 
 % Compute rotation and lattice-relaxation matrices

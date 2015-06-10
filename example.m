@@ -6,11 +6,27 @@
 
 addpath(genpath(fullfile(pwd, 'mrvox')));
 
-%% Test a simple example
-fprintf('Simulating a GESFIDE sequence on a simplistic voxel...\n');
-[sa, sphi] = VoxelSim2D_do_one('config/voxpar_single.txt', 'config/seqpar_GESFIDE.txt');
+%% FID example
+fprintf('Simulating a FID on simple voxel...\n');
+[sa, sphi] = VoxelSim2D_do_one('config/voxpar_simple.txt', 'config/seqpar_fid.txt');
 
-%% Test a dictionary generation 
+%% Spin echo example
+fprintf('Simulating a spin echo on simple voxel...\n');
+[sa, sphi] = VoxelSim2D_do_one('config/voxpar_simple.txt', 'config/seqpar_se.txt');
+
+%% Spin echo example with strong susceptibility and reduced diffusion
+fprintf('Simulating a spin echo on simple voxel...\n');
+[sa, sphi] = VoxelSim2D_do_one('config/voxpar_simple_highsusc_lowdiff.txt', 'config/seqpar_se.txt');
+
+%% Stimulated echo example
+fprintf('Simulating a spin echo on simple voxel...\n');
+[sa, sphi] = VoxelSim2D_do_one('config/voxpar_simple_highsusc_lowdiff.txt', 'config/seqpar_stim.txt');
+
+%% Narrow diffusion gradient example with hindered diffusion and cells
+fprintf('Simulating a narrow diffusion gradient on simple voxel...\n');
+[sa, sphi] = VoxelSim2D_do_one('config/voxpar_simple_hindered_cell.txt', 'config/seqpar_narrowpulse_singlerefoc.txt');
+
+%% Dictionary generation example
 fprintf('Simulating a dictionary on a simplistic voxel with varying vessel radius...\n');
 dico = GenLookUp2D('config/voxpar_dico.txt', 'config/seqpar_GESFIDE.txt');
 

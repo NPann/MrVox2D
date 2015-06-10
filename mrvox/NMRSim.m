@@ -6,8 +6,8 @@ function [M, Seqflag, too] = NMRSim(Model,too,G,M,Pulseq,Seq,tt)
 
 
 %% Evolution
-M.per = M.per.*too.rot;
-M.par = (M.par-M.M0) .* exp(-too.R1dt) + M.M0; 
+M.per = M.per .* too.rot;
+M.par = (M.par - M.M0) .* exp(-too.R1dt) + M.M0; 
 
 %% Compute diffusion of water
 if Model.phy.DH2O > 0

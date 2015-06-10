@@ -10,13 +10,13 @@ TR  = para.TR;
 TRF = para.RF.exc.time;
 ang = (-1)^(too.inc+1) * para.RF.exc.ang*pi/180;
 dur = para.RF.exc.dur;
-%pha = ((too.inc-1) * para.RF.exc.phainc + para.RF.exc.pha0)*pi/180;
-(para.RF.exc.pha + para.RF.exc.phainc * (too.inc * (too.inc-1)/2))*pi/180;
+pha = (para.RF.exc.pha0 + para.RF.exc.phainc * (too.inc * (too.inc-1)/2))*pi/180;
 
 Gxc = 0;
 Gyc = 0;
 
 RFc = 0;
+
 
 %% RF pulse
 if any( abs(TRF - mod(tt,TR))< dt *(1-1e-9))
