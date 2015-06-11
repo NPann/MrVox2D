@@ -61,3 +61,5 @@ Norbert Schuff, UCSF - VAMC SF
 ### License ###
 
 MrVox2D is licensed under the terms of the BSD license. Please see the License file in the repository
+
+![mrvox2d_illustration.png](https://bitbucket.org/repo/G9qXRy/images/877007194-mrvox2d_illustration.png)
