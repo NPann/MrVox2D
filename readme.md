@@ -55,7 +55,8 @@ Through the issues tracker
 
 ### Who do I talk to? ###
 
-Nicolas Pannetier, UCSF - VAMC SF  
+Nicolas Pannetier, UCSF - VAMC SF
+Thomas Christen, Stanford University
 Norbert Schuff, UCSF - VAMC SF
 
 ### License ###
