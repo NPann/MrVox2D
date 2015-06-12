@@ -9,11 +9,11 @@ signal considering the effect of susceptibility inclusions and diffusion.
     1. a voxel with a user-defined microstructure
     2. a MR pulse sequence  
 * MrVox is designed with versatility in mind and user can control:
-    1. the geometry of the voxel (size, number of blood vessels and cells, their size, their spacing, etc.)
+    1. the geometry of the voxel (number of blood vessels and cells, size, spacing, etc.)
     2. the MR-related properties of the different compartments (T1, T2, M0, susceptibility)
-    3. the magnetic field and its variation over the voxel dimension
-    4. the water diffusion  
-* MrVox2D is particularly designed to generate dictionaries of MR signals with varying input properties (blood volume, vessel size). 
+    3. the magnetic field and its variation over the voxel dimension (B0 orientation, linear gradient)
+    4. the water diffusion (diffusivity, hindered or not)
+* MrVox2D is particularly designed to generate dictionaries of MR signals with varying input properties (e.g. blood volume, vessel size, oxygenation). 
 For example, it has been used succesfully in the vascluar fingerprinting framework 
 [(Christen et al. NeuroImage 20014)](http://www.sciencedirect.com/science/article/pii/S1053811913012019)
 * **Specifically**: The voxel is considered as a 2D plane and the magnetic inclusions (e.g. vessels) are disks randomly spread in this 2D plane. Voxel and sequence parameters are defined in a text file. MR sequence is passed as a function of the simulator. Perturbation of the magnetic field by the susceptibility inclusions are considered. Diffusion is modeled by convolution of a gaussian kernel and can be hindered to compartment walls. Even though the simulation is 2D, the MR signal is similar to the one obtained in a 3D voxel with isotropic vessel orientation when the number of vessels is "high enough" [(Pannetier et al. Plos. 2014)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057636).
