@@ -55,9 +55,9 @@ Through the issues tracker
 
 ### Who do I talk to? ###
 
-Nicolas Pannetier
-Thomas Christen
-Clement Debacker
+Nicolas Pannetier  
+Thomas Christen  
+Clement Debacker  
 
 ### License ###
 
