@@ -65,6 +65,7 @@ MrVox2D is licensed under the terms of the BSD license. Please see the License f
 ### Citation ###
 
 If you use this simulator, please refer to:  
+
 * MR Vascular Fingerprinting: A New Approach to Compute Cerebral Blood Volume, Mean Vessel Radius, and Oxygenation Maps in the Human Brain T. Christen, NA. Pannetier, W. Ni, D. Qiu, M. Moseley, N. Schuff, and G. Zaharchuk. Neuroimage. 2014 Apr 1; 89: 262–270.
 
 * or: A Simulation Tool for Dynamic Contrast Enhanced MRI. NA. Pannetier, CS. Debacker, F. Mauconduit, T. Christen, EL. Barbier. Plos One 2014. 10.1371/journal.pone.0057636
