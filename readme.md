@@ -14,12 +14,12 @@ signal considering the effect of susceptibility inclusions and diffusion.
     3. the magnetic field and its variation over the voxel dimension (B0 orientation, linear gradient)
     4. the water diffusion (diffusivity, hindered or not)
 * MrVox2D is particularly designed to generate dictionaries of MR signals with varying input properties (e.g. blood volume, vessel size, oxygenation). 
-For example, it has been used succesfully in the vascluar fingerprinting framework 
+For example, it has been used successfully in the vascular fingerprinting framework 
 [(Christen et al. NeuroImage 20014)](http://www.sciencedirect.com/science/article/pii/S1053811913012019)
 * **Specifically**: The voxel is considered as a 2D plane and the magnetic inclusions (e.g. vessels) are disks randomly spread in this 2D plane. Voxel and sequence parameters are defined in a text file. MR sequence is passed as a function of the simulator. Perturbation of the magnetic field by the susceptibility inclusions are considered. Diffusion is modeled by convolution of a gaussian kernel and can be hindered to compartment walls. Even though the simulation is 2D, the MR signal is similar to the one obtained in a 3D voxel with isotropic vessel orientation when the number of vessels is "high enough" [(Pannetier et al. Plos. 2014)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057636).
 * **Limitations**: The simulation of the diffusion is modeled by a convolution kernel and the computation is performed in the Fourier domain. The related aliasing effect have some consequences: 
     1. The geometry lattice must be periodic
-    2. When applying gradient, their strenght must be such that the dephasing over the voxel extend during the simulation step time dt must be modulo 2 x pi.
+    2. When applying gradient, their strength must be such that the dephasing over the voxel extend during the simulation step time dt must be modulo 2 x pi.
  
 ### How do I get set up? ###
 
@@ -43,10 +43,10 @@ Dico = GenLookUp2D('config/voxpar_dico.txt','config/seqpar_GESFIDE.txt')
 ```
 
 * **Deployment**: Dictionary generation is highly parrallelizable and the code
-provides a support for using Matlab Discributed Computing Server (MDCS). Server
+provides a support for using Matlab Distributed Computing Server (MDCS). Server
 configuration must be defined in the configuration file (see config/cluster_info.txt for an example).
-The example file is compatible with Matlab R2011b and the code will likely need an update
-to be use with newer version. The code can also be compiled using Matlab compiler and deployed with another scheduler
+The example file is compatible with Matlab R2011b and the code will likely need updates
+to be used with newer version. The code can also be compiled using the Matlab compiler and deployed with another scheduler
 
 
 ### Contribution guidelines ###
@@ -65,7 +65,7 @@ MrVox2D is licensed under the terms of the BSD license. Please see the License f
 
 ### Citation ###
 
-If you use this simulator, please refer to:  
+If you use this simulator and need to reference it, please cite:  
 
 * MR Vascular Fingerprinting: A New Approach to Compute Cerebral Blood Volume, Mean Vessel Radius, and Oxygenation Maps in the Human Brain T. Christen, NA. Pannetier, W. Ni, D. Qiu, M. Moseley, N. Schuff, and G. Zaharchuk. Neuroimage. 2014 Apr 1; 89: 262–270.
 
