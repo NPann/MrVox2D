@@ -1,8 +1,6 @@
 function [too, M] = InitSim(Model,G)
 
 % Initiate the matrices and structure used in the simulation
-%
-% Code by N.Pannetier, Fev 13rd 2013
 
 
 %% Initialize variables

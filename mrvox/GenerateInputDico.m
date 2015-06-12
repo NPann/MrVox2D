@@ -1,7 +1,6 @@
 function [Label, par] = GenerateInputDico(Model)
 
 % Explore the structure to find arrays with dim 2 > 1
-% Nicolas Pannetier, UCSF, April 4th 2013
 
 cname = 'Model';
 DicInp = [];

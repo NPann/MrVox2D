@@ -9,7 +9,6 @@ function P=GeoGen(Model)
 % Output:
 %   - P: structure containing geometry matrices
 
-% Code by N.Pannetier, C.Debacker, INSERM, Grenoble, 2012
 
 
 %% Initialize

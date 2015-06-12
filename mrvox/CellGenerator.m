@@ -1,19 +1,3 @@
-% Copyright 2013 Nicolas Pannetier, Clément Debacker, Franck Mauconduit, Thomas Christen, Emmanuel Barbier
-% This file is part of DCESIM.
-% 
-%   DCESIM is free software: you can redistribute it and/or modify
-%    it under the terms of the GNU General Public License as published by
-%    the Free Software Foundation, either version 3 of the License, or
-%   (at your option) any later version.
-% 
-%    DCESIM is distributed in the hope that it will be useful,
-%    but WITHOUT ANY WARRANTY; without even the implied warranty of
-%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-%    GNU General Public License for more details.
-%
-%    You should have received a copy of the GNU General Public License
-%    along with DCESIM.  If not, see <http://www.gnu.org/licenses/>.
-
 function model = CellGenerator(R0,Inter,fextra,radii,center,ax,vasc_ind,verb)
 
 % Generates a White Matter model geometry. The geometry is composed of
@@ -29,7 +13,7 @@ function model = CellGenerator(R0,Inter,fextra,radii,center,ax,vasc_ind,verb)
 %       ind  : Indice vector of the spheres. Same indices mean a same sphere
 %              duplicated on the other side of the cibe.
 %
-% Code by F. Mauconduit, GIN, Grenoble, 2009
+% Code adapted from F. Mauconduit, GIN, Grenoble, 2009
 
 % Distribution des cylindres
 progress_str = '';

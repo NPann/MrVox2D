@@ -1,8 +1,7 @@
 function [too] = InitSeq(para,too)
 
 % Compute RF pulses rotation operator and dynamic gradient
-%
-% Code by N.Pannetier, Feb 13rd 2013
+
 
 ang = para.RF.exc.ang*pi/180;
 dur = para.RF.exc.dur;

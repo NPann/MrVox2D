@@ -1,8 +1,6 @@
 function [M, Seqflag, too] = NMRSim(Model,too,G,M,Pulseq,Seq,tt)
 
 % Compute the evolution of the magnetization matrices
-% 
-% Code by N.Pannetier, Feb 13rd 2013
 
 
 %% Evolution

@@ -1,8 +1,6 @@
 function [progress_str, tic_dt] = DisplayProgress(tt,Model,progress_str,tic_dt,ticI)
 
 % Display algorithm progression
-%
-% Code by N.Pannetier, C.Debacker, INSERM, Grenoble, 2012
 
 percentFinished = floor(tt/Model.Tmax*100);
 elapsed_time = toc(ticI);

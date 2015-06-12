@@ -1,7 +1,6 @@
 function [Label, par] = GenerateModelTable(Model)
 
 % Explore the structure to find arrays in it
-% Nicolas Pannetier, UCSF, April 4th 2013
 
 cname = 'Model';
 DicInp = [];

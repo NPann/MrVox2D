@@ -14,8 +14,6 @@ function [Sa, Sphi] = VoxelSim2D_do_one(ModelFileName,SeqFileName,ModelLineNum,S
 %
 % NB: Code can be compiled and be deployed for parallel computation using
 % the Matlab RunTime package
-%
-% N.Pannetier, (Feb 13rd, 2013)
 
 
 %% Read Input file

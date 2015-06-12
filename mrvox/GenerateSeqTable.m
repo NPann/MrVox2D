@@ -1,7 +1,6 @@
 function [Label, par] = GenerateSeqTable(Seq)
 
 % Explore the structure to find arrays in it
-% Nicolas Pannetier, UCSF, April 4th 2013
 
 cname = 'Seq';
 DicInp = [];
