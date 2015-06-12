@@ -1,8 +1,4 @@
-% The following peace of code simulate the MR signal from a voxel as defined
-% in 'config/voxpar_single.txt' when running a GESFIDE MR pulse sequence as
-% defined in 'config/seqpar_GESFIDE.txt'. A very simplistic display will pop
-% up that shows the MR signal and the some voxel configurations (and SLOW
-% DOWN the simulation)
+% The following code illustrates some use cases of MrVox2d
 
 addpath(genpath(fullfile(pwd, 'mrvox')));
 
