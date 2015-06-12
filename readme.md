@@ -1,7 +1,7 @@
 # README #
 
-MrVox2D is a toolkit writen in Matlab to simulate the Magnetic Resonance 
-signal
+MrVox2D is a toolkit written in Matlab to simulate the Magnetic Resonance 
+signal while considering the effect of susceptibility inclusions and diffusion.
 
 ### What is MrVox2D for? ###
 
