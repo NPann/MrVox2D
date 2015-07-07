@@ -170,7 +170,7 @@ for NbFile = 1:numel(FileIn)
     if PathOut
         [~,FileShort,~] = fileparts(File);
         [~,SeqFileShort,~] = fileparts(SeqFileName);
-        SaveFile = fullfile(PathOut,sprintf('%s_%s_Dico.mat',FileShort,SeqFileShort));
+        SaveFile = fullfile(PathOut,sprintf('%s_%s_dico.mat',FileShort,SeqFileShort));
         save(SaveFile,'Dico','par','Model','Label','Seq','-v7.3');
     end
 end
