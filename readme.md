@@ -31,14 +31,12 @@ For example, it has been used successfully in the vascular fingerprinting framew
 
     * **Single/simple use**: to run the simulator on a voxel/sequence:
 ```
-#!matlab
 [Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt','config/seqpar_GESFIDE.txt')
 ```
 
 * or:
     * **Dictionary use**: to generate a dictionary of MR signal by varying any parameters defined as an array in the Model structure of the configuration file (Model.phy, Model.vox or Model.geo):
 ```
-#!matlab
 Dico = GenLookUp2D('config/voxpar_dico.txt','config/seqpar_GESFIDE.txt')
 ```
 
