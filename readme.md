@@ -1,7 +1,7 @@
 # README #
 
 MrVox2D is a toolkit written in Matlab to simulate the magnetic resonance 
-signal considering the effect of susceptibility inclusions and diffusion.
+signal considering the effect of susceptibility inclusions and wather diffusion.
 
 ### What is MrVox2D for? ###
 
@@ -14,28 +14,28 @@ signal considering the effect of susceptibility inclusions and diffusion.
     3. the magnetic field and its variation over the voxel dimension (B0 orientation, linear gradient)
     4. the water diffusion (diffusivity, hindered or not)
 * MrVox2D is particularly designed to generate dictionaries of MR signals with varying input properties (e.g. blood volume, vessel size, oxygenation). 
-For example, it has been used successfully in the vascular fingerprinting framework 
+For example, it has been used for the vascular fingerprinting framework 
 [(Christen et al. NeuroImage 20014)](http://www.sciencedirect.com/science/article/pii/S1053811913012019)
-* **Specifically**: The voxel is considered as a 2D plane and the magnetic inclusions (e.g. vessels) are disks randomly spread in this 2D plane. Voxel and sequence parameters are defined in a text file. MR sequence is passed as a function of the simulator. Perturbation of the magnetic field by the susceptibility inclusions are considered. Diffusion is modeled by convolution of a gaussian kernel and can be hindered to compartment walls. Even though the simulation is 2D, the MR signal is similar to the one obtained in a 3D voxel with isotropic vessel orientation when the number of vessels is "high enough" [(Pannetier et al. Plos. 2014)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057636).
+* **Specifically**: The voxel is considered as a 2D plane and the magnetic inclusions (e.g. vessels) are disks randomly spread in this 2D plane. Voxel and sequence parameters are defined in a text file. The MR sequence is passed as a function handle of the simulator. Perturbations of the magnetic field by the susceptibility inclusions are considered. Diffusion is modeled by convolution of a gaussian kernel and can be hindered by cell and vessel compartment walls. Even though the simulation is 2D, the MR signal is similar to the one obtained in a 3D voxel with isotropic vessel orientation when the number of vessels is "high enough" [(Pannetier et al. Plos. 2014)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057636).
 * **Limitations**: The simulation of the diffusion is modeled by a convolution kernel and the computation is performed in the Fourier domain. The related aliasing effect have some consequences: 
     1. The geometry lattice must be periodic
-    2. When applying gradient, their strength must be such that the dephasing over the voxel extend during the simulation step time dt must be modulo 2 x pi.
+    2. When applying gradient, their intensity must be such that the dephasing over the voxel extent during the simulation step time dt is modulo 2 x pi.
  
 ### How do I get set up? ###
 
 * Add mrvox/ to your matlab path
 * Check out the example in example.m
-* Start tinkering with your own stuff
+* Start tinkering with your own configuration files
 * Examples of configuration files for the voxel and MR sequences can be found in config/.
 * The two main use cases are:
 
-    * **Single/simple use**: to run the simulator on a voxel/sequence:
+    * **Single/simple use**: to run the simulator on a voxel geometry and MR sequence:
 ```
 [Sa, Sphi] = VoxelSim2D_do_one('config/voxpar_single.txt','config/seqpar_GESFIDE.txt')
 ```
 
 * or:
-    * **Dictionary use**: to generate a dictionary of MR signal by varying any parameters defined as an array in the Model structure of the configuration file (Model.phy, Model.vox or Model.geo):
+    * **Dictionary use**: to generate a dictionary of MR signals by varying *any* parameters defined as an array in the Model structure of the configuration file (Model.phy, Model.vox or Model.geo):
 ```
 Dico = GenLookUp2D('config/voxpar_dico.txt','config/seqpar_GESFIDE.txt')
 ```
