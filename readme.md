@@ -21,7 +21,7 @@ For example, it has been used for the vascular fingerprinting framework
     * The simulation of the diffusion is modeled by a convolution kernel and the computation is performed in the Fourier domain. The related aliasing effect have some consequences: 
         1. The geometry lattice must be periodic
         2. When applying gradient, their intensity must be such that the dephasing over the voxel extent during the simulation step time dt is modulo 2 x pi.
-    * IMPORTANT: It has been reported that the approach for generating the field offset map (average of field maps generated with B0 is 3 orthogonal directions) was not the most accurate when comparing to a standard 3D approach. However, excellent agreement with the 3D was reported when using a random B0 direction for each cylinder (as [here](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.21690.)), which is not implemented in this repo.
+    * IMPORTANT: It has been reported that the approach for generating the field offset map (average of field maps generated with B0 in 3 orthogonal directions) was not the most accurate when comparing to a standard 3D approach. However, excellent agreement with the 3D was reported when using a random B0 direction for each cylinder (as [here](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.21690.)), which is not implemented in this repo.
  
 ### How do I get set up? ###
 
