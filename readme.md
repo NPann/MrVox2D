@@ -18,10 +18,10 @@ For example, it has been used for the vascular fingerprinting framework
 [(Christen et al. NeuroImage 20014)](http://www.sciencedirect.com/science/article/pii/S1053811913012019)
 * **Specifically**: The voxel is considered as a 2D plane and the magnetic inclusions (e.g. vessels) are disks randomly spread in this 2D plane. Voxel and sequence parameters are defined in a text file. The MR sequence is passed as a function handle of the simulator. Perturbations of the magnetic field by the susceptibility inclusions are considered. Diffusion is modeled by convolution of a gaussian kernel and can be hindered by cell and vessel compartment walls. Even though the simulation is 2D, the MR signal is similar to the one obtained in a 3D voxel with isotropic vessel orientation when the number of vessels is "high enough" [(Pannetier et al. Plos. 2014)](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0057636).
 * **Limitations**: 
-* The simulation of the diffusion is modeled by a convolution kernel and the computation is performed in the Fourier domain. The related aliasing effect have some consequences: 
-    1. The geometry lattice must be periodic
-    2. When applying gradient, their intensity must be such that the dephasing over the voxel extent during the simulation step time dt is modulo 2 x pi.
-* IMPORTANT: It has been reported that the approach for generating the field offset map (average of field maps generated with B0 is 3 orthogonal directions) was not the most accurate when comparing to a standard 3D approach. However, excellent agreement with the 3D was reported when using a random B0 direction for each cylinder (as [here](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.21690.), which is not implemented in this repo)
+    * The simulation of the diffusion is modeled by a convolution kernel and the computation is performed in the Fourier domain. The related aliasing effect have some consequences: 
+        1. The geometry lattice must be periodic
+        2. When applying gradient, their intensity must be such that the dephasing over the voxel extent during the simulation step time dt is modulo 2 x pi.
+    * IMPORTANT: It has been reported that the approach for generating the field offset map (average of field maps generated with B0 is 3 orthogonal directions) was not the most accurate when comparing to a standard 3D approach. However, excellent agreement with the 3D was reported when using a random B0 direction for each cylinder (as [here](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.21690.)), which is not implemented in this repo.
  
 ### How do I get set up? ###
 
